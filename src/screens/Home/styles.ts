@@ -14,9 +14,20 @@ margin-bottom: 10px;
 `;
 
 export const Button = styled.TouchableOpacity`
-
+  background: #c2c2c2;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
 `;
 
 export const TextButton = styled.Text`
 
 `
+
+export const Title = styled.Text`
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 12px;
+  `
