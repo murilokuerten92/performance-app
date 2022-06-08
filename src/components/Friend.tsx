@@ -1,17 +1,22 @@
-import React from 'react';
-import  {Text} from 'react-native';
+import React, { memo } from "react";
+import { Text } from "react-native";
 
 interface Props {
-    data: {
-        name: string;
-        likes: number;
-    }
+  data: {
+    id: number;
+    name: string;
+    likes: number;
+  };
 }
 
-export function Friend({data}: Props){
- return (
+function FriendComponent({ data }: Props) {
+  return (
     <Text>
-{data.name } - Likes: { data.likes  }
+      {data.name} - Likes: {data.likes}
     </Text>
- );
-}
+  );
+};
+
+export const Friend = memo(FriendComponent, (prevProps, nextProps) => {
+    return Object.is(prevProps.data, nextProps.data)
+});

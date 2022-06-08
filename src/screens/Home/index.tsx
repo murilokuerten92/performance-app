@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ScrollView } from "react-native";
 import { FriendsList } from "../../components/FriendsList";
 
-import { Container, Input, Button, TextButton } from "./styles";
+import { Container, Input, Button, TextButton, Title } from "./styles";
 
 export function Home() {
   const [name, setName] = useState("");
@@ -18,9 +18,10 @@ export function Home() {
 
   return (
     <Container>
+      <Title>Amigos</Title>
       <Input placeholder="Nome do cliente" onChangeText={setName} />
 
-      <Button onPress={handleSearch}>
+      <Button  onPress={handleSearch}>
         <TextButton>Buscar</TextButton>
       </Button>
       <ScrollView>
