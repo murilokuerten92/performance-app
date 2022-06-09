@@ -14,7 +14,7 @@ margin-bottom: 10px;
 `;
 
 export const Button = styled.TouchableOpacity`
-  background: #c2c2c2;
+  background: #6495ED;
   padding: 10px;
   align-items: center;
   justify-content: center;
@@ -22,7 +22,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const TextButton = styled.Text`
-
+  color: #fff;
 `
 
 export const Title = styled.Text`
