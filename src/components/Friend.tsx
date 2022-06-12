@@ -1,22 +1,19 @@
 import React, { memo } from "react";
 import { Text } from "react-native";
-
+import { Friend as FriendTypes } from "../types/friends";
 interface Props {
-  data: {
-    id: number;
-    name: string;
-    likes: number;
-  };
+  data: FriendTypes;
 }
 
 function FriendComponent({ data }: Props) {
   return (
     <Text>
-      {data.name} - Likes: {data.likes}
+      {data.name} - Likes: {data.likes} 
+      Online: {data.online}
     </Text>
   );
-};
+}
 
 export const Friend = memo(FriendComponent, (prevProps, nextProps) => {
-    return Object.is(prevProps.data, nextProps.data)
+  return Object.is(prevProps.data, nextProps.data);
 });
