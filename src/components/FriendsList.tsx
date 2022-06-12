@@ -1,13 +1,10 @@
 import React, { useMemo } from "react";
 import { View, Text } from "react-native";
 import { Friend } from "./Friend";
+import { Friend as FriendTypes } from "../types/friends";
 
 interface Props {
-  data: {
-    id: number;
-    name: string;
-    likes: number;
-  }[];
+  data: FriendTypes[];
 }
 
 export function FriendsList({ data }: Props) {

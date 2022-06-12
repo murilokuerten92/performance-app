@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ScrollView } from "react-native";
 import { FriendsList } from "../../components/FriendsList";
-
+import { Friend } from '../../types/friends'
 import { Container, Input, Button, TextButton, Title } from "./styles";
 
 export function Home() {
@@ -13,7 +13,14 @@ export function Home() {
 
     const data = await response.json();
 
-    setFriends(data);
+    const friendsFormatted = data.map((friend: Friend) => {
+      return {
+        ...friend,
+        online: `${new Date().getHours()} : ${new Date().getMinutes()}`
+      }
+    })
+
+    setFriends(friendsFormatted);
   }
 
   return (
