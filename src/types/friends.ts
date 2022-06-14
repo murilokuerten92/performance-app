@@ -3,4 +3,5 @@ export interface Friend {
       name: string;
       likes: number;
       online: string;
+      follow: () => void;
   }
